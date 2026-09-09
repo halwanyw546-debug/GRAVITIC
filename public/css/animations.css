@@ -1,0 +1,196 @@
+/* ========================================
+   GRAVITIC - ANIMATIONS
+======================================== */
+
+/* Hero content entrance */
+.hero-badge {
+    animation: fadeDown 0.8s ease forwards;
+}
+
+.hero-content h1 {
+    animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.hero-description {
+    animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.hero-buttons {
+    animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.hero-stats {
+    animation: fadeUp 0.9s ease 0.4s both;
+}
+
+
+/* ========================================
+   HERO CARD
+======================================== */
+
+.visual-card {
+    animation:
+        cardEntrance 1s ease 0.3s both,
+        floatingCard 5s ease-in-out 1.3s infinite;
+}
+
+
+/* ========================================
+   G LOGO
+======================================== */
+
+.visual-logo {
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+
+/* ========================================
+   SCROLL ARROW
+======================================== */
+
+.scroll-indicator i {
+    animation: scrollArrow 1.5s ease-in-out infinite;
+}
+
+
+/* ========================================
+   SERVICE CARDS
+======================================== */
+
+.service-card {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.service-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.service-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+
+/* ========================================
+   KEYFRAMES
+======================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes cardEntrance {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(40px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes logoGlow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 20px 60px rgba(124, 92, 255, 0.30);
+    }
+
+    50% {
+        box-shadow:
+            0 20px 80px rgba(124, 92, 255, 0.60);
+    }
+}
+
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(7px);
+        opacity: 1;
+    }
+}
+
+
+/* ========================================
+   REDUCE MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

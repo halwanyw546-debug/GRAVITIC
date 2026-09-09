@@ -1,0 +1,653 @@
+/* ========================================
+   GRAVITIC - MAIN STYLE
+======================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+    --bg-primary: #07090d;
+    --bg-secondary: #0d1117;
+    --bg-card: #111720;
+
+    --text-primary: #ffffff;
+    --text-secondary: #a6adbb;
+
+    --accent: #7c5cff;
+    --accent-light: #9b85ff;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --container-width: 1200px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(7, 9, 13, 0.75);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: #ffffff;
+}
+
+
+.logo::first-letter {
+    color: var(--accent);
+}
+
+
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.nav-links a {
+    position: relative;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent);
+
+    transition: var(--transition);
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   NAV ACTIONS
+======================================== */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ========================================
+   LANGUAGE BUTTON
+======================================== */
+
+.language-btn {
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    border: 1px solid var(--border);
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    transition: var(--transition);
+}
+
+
+.language-btn:hover {
+    color: white;
+
+    border-color: var(--accent);
+}
+
+
+/* ========================================
+   NAV CONTACT BUTTON
+======================================== */
+
+.nav-contact-btn {
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.nav-contact-btn:hover {
+    background: var(--accent-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 23px;
+}
+
+
+/* ========================================
+   GENERAL SECTION
+======================================== */
+
+.section {
+    padding: 110px 0;
+}
+
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.section-header {
+    max-width: 700px;
+
+    margin-bottom: 60px;
+}
+
+
+.section-subtitle {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--accent-light);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.section-header h2 {
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+.section-header h2 span {
+    color: var(--accent);
+}
+
+
+.section-header p {
+    color: var(--text-secondary);
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    padding: 0 25px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.btn-primary {
+    background: var(--accent);
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background: var(--accent-light);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(124, 92, 255, 0.25);
+}
+
+
+.btn-secondary {
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: white;
+}
+
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+
+    background: rgba(124, 92, 255, 0.08);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+    background: var(--accent);
+
+    color: white;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #292f3b;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+/* ========================================
+   RTL - ARABIC SUPPORT
+======================================== */
+
+body.rtl {
+    direction: rtl;
+}
+
+
+/* NAVBAR */
+
+body.rtl .navbar {
+    direction: rtl;
+}
+
+body.rtl .nav-links {
+    direction: rtl;
+}
+
+body.rtl .nav-actions {
+    direction: rtl;
+}
+
+
+/* HERO */
+
+body.rtl .hero-content {
+    text-align: right;
+}
+
+body.rtl .hero-buttons {
+    justify-content: flex-start;
+}
+
+body.rtl .hero-stats {
+    direction: rtl;
+}
+
+body.rtl .hero-visual {
+    direction: rtl;
+}
+
+
+/* SERVICES */
+
+body.rtl .section-header {
+    text-align: right;
+}
+
+body.rtl .service-card {
+    text-align: right;
+}
+
+
+/* ABOUT */
+
+body.rtl .about-left {
+    text-align: right;
+}
+
+body.rtl .about-card {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .about-card:hover {
+    transform: translateX(-8px);
+}
+
+
+/* PROJECTS */
+
+body.rtl .projects-header {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .project-filters {
+    direction: rtl;
+}
+
+body.rtl .project-info {
+    direction: rtl;
+    text-align: right;
+}
+
+
+/* WHY US */
+
+body.rtl .why-us-content {
+    text-align: right;
+}
+
+body.rtl .why-card {
+    text-align: right;
+}
+
+body.rtl .why-number {
+    right: auto;
+    left: 28px;
+}
+
+
+/* CONTACT */
+
+body.rtl .contact-info {
+    text-align: right;
+}
+
+body.rtl .contact-item {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .contact-social {
+    direction: rtl;
+}
+
+body.rtl .contact-form {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .contact-methods {
+    direction: rtl;
+}
+
+
+/* FORM INPUTS */
+
+body.rtl input,
+body.rtl textarea,
+body.rtl select {
+    text-align: right;
+}
+
+
+/* BUTTON ICONS */
+
+body.rtl .btn i.fa-arrow-right,
+body.rtl .service-card a i,
+body.rtl .project-arrow i {
+    transform: rotate(180deg);
+}
+
+
+/* FOOTER */
+
+body.rtl .footer {
+    direction: rtl;
+}
+
+body.rtl .footer-brand,
+body.rtl .footer-column,
+body.rtl .footer-contact {
+    text-align: right;
+}
+
+body.rtl .footer-contact {
+    align-items: flex-start;
+}
+
+body.rtl .footer-social {
+    direction: rtl;
+}
+
+body.rtl .footer-bottom {
+    direction: rtl;
+}
+
+
+/* ========================================
+   MOBILE RTL
+======================================== */
+
+@media (max-width: 992px) {
+
+    body.rtl .nav-links {
+        text-align: right;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    body.rtl .about-left,
+    body.rtl .why-us-content {
+        text-align: center;
+    }
+
+    body.rtl .hero-content {
+        text-align: center;
+    }
+
+    body.rtl .hero-buttons {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    body.rtl .why-number {
+        left: 22px;
+        right: auto;
+    }
+
+}
