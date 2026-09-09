@@ -228,9 +228,13 @@ ${message}`;
 
         else if (sendMethod === "email") {
 
-            alert(
-                "Email contact will be available soon. Please choose WhatsApp for now."
-            );
+            const emailAddress = "gravitic.company@gmail.com";
+            const subject = "New Project Request - GRAVITIC";
+
+            const gmailURL =
+                `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullMessage)}`;
+
+            window.open(gmailURL, "_blank");
 
         }
 
