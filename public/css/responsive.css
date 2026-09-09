@@ -354,6 +354,19 @@
 }
 
 
+@media (max-width: 768px) {
+
+    .header-logo-image {
+        height: 40px;
+    }
+
+    .footer-logo-image {
+        height: 60px;
+        max-width: 200px;
+    }
+}
+
+
 /* SMALL MOBILE */
 @media (max-width: 480px) {
 
@@ -777,10 +790,6 @@
 /* SMALL MOBILE */
 @media (max-width: 480px) {
 
-    .footer-logo {
-        font-size: 24px;
-    }
-
     .footer-column h4 {
         font-size: 13px;
     }
@@ -797,5 +806,14 @@
 
     .footer-bottom p {
         font-size: 9px;
+    }
+
+    .header-logo-image {
+        height: 36px;
+    }
+
+    .footer-logo-image {
+        height: 52px;
+        max-width: 180px;
     }
 }

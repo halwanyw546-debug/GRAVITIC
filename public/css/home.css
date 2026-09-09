@@ -2063,20 +2063,23 @@
 ======================================== */
 
 .footer-logo {
-    display: inline-block;
-
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
     margin-bottom: 20px;
-
-    color: white;
-
-    font-size: 28px;
-    font-weight: 900;
-
-    letter-spacing: 2px;
 }
 
-.footer-logo span {
-    color: var(--accent);
+.footer-logo-image {
+    display: block;
+    width: auto;
+    height: 70px;
+    max-width: 230px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-image:hover {
+    transform: scale(1.03);
 }
 
 

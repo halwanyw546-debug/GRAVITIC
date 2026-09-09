@@ -276,8 +276,8 @@ const translations = {
         email:
             "Email",
 
-        comingSoon:
-            "Coming Soon",
+        emailAddress:
+            "gravitic.company@gmail.com",
 
         workingHours:
             "Working Hours",
@@ -670,8 +670,8 @@ const translations = {
         email:
             "البريد الإلكتروني",
 
-        comingSoon:
-            "قريبًا",
+        emailAddress:
+            "gravitic.company@gmail.com",
 
         workingHours:
             "ساعات العمل",
@@ -1472,7 +1472,7 @@ function updateLanguage() {
         contactItems[1]
             .querySelector("a")
             .textContent =
-            t.comingSoon;
+            t.emailAddress;
 
 
         contactItems[2]

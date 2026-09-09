@@ -134,18 +134,24 @@ img {
 ======================================== */
 
 .logo {
-    font-size: 25px;
-
-    font-weight: 900;
-
-    letter-spacing: 3px;
-
-    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 
-.logo::first-letter {
-    color: var(--accent);
+.header-logo-image {
+    display: block;
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.header-logo-image:hover {
+    transform: scale(1.04);
+    opacity: 0.95;
 }
 
 
