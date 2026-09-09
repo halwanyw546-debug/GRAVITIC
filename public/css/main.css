@@ -136,6 +136,8 @@ img {
 .logo {
     display: flex;
     align-items: center;
+    height: 100%;
+    flex-shrink: 0;
     text-decoration: none;
 }
 
@@ -143,7 +145,8 @@ img {
 .header-logo-image {
     display: block;
     width: auto;
-    height: 48px;
+    height: 55px;
+    max-width: 230px;
     object-fit: contain;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
